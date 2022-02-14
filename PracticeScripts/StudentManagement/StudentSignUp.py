@@ -6,6 +6,10 @@ from PracticeScripts.StudentManagement.ReusableMethods import ReusableMethods
 class StudentSignUp:
 
     def student_signup(self):
+        """
+         To accept details of the student and create record in the DB for each student.
+        :return:
+        """
         print("\n")
         print("***********  WELCOME TO STUDENT SIGNUP PAGE ************")
         f_name = input("Enter your First Name: ")

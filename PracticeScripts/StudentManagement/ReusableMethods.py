@@ -55,7 +55,7 @@ class ReusableMethods:
 
     def accept_validate_email(self):
         """
-
+            To accept the email ID with validation.
         :return:
         """
         error_msg = "Must have minimum 7 characters, domain name. No space and invalid special characters allowed except \'_\'"

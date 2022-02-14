@@ -4,7 +4,13 @@ from PracticeScripts.StudentManagement.DB_Operations import ConnectToDB
 class StudentLogin(ConnectToDB):
 
     def studentLogin(self, tablename, u_name,db=ConnectToDB()):
-
+        """
+            To login into student details database with valid credentials
+        :param tablename:
+        :param u_name:
+        :param db:
+        :return: Boolean
+        """
         query = "select password from " + tablename + " where username =\'" + u_name + "\'"
         fetch_password = db.display_record(query)
         count = 0
@@ -22,6 +28,10 @@ class StudentLogin(ConnectToDB):
                     return False
 
     def displayDetails(self):
+        """
+            To display student's record based on the credentials entered.
+        :return:
+        """
         u_name = input("Enter the username: ")
         if self.studentLogin("student_details",u_name):
             self.display_record_of_user("student_details", u_name)

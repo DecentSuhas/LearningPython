@@ -4,6 +4,13 @@ from PracticeScripts.StudentManagement.DB_Operations import ConnectToDB
 class AdminLogin(ConnectToDB):
 
     def verify_login(self, tablename, u_name, db=ConnectToDB()):
+        """
+            To verify the sercure login by validating the credentials given
+        :param tablename:
+        :param u_name:
+        :param db:
+        :return:
+        """
         query = "select password from " + tablename + " where username =\'" + u_name + "\'"
         fetch_password = db.display_record(query)
         count = 0
@@ -21,6 +28,12 @@ class AdminLogin(ConnectToDB):
                     return False
 
     def add_student_record(self,tablename,u_name):
+        """
+         To create a new record of a student by the admin based on the input provided
+        :param tablename:
+        :param u_name:
+        :return:
+        """
         if self.verify_login(tablename,u_name):
             print("")
             print(" ===============  Welcome to \'ADD STUDENT RECORD PAGE\'   =============== ")
