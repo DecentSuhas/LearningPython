@@ -61,5 +61,5 @@ class AdminLogin(ConnectToDB):
 #tests = AdminLogin()
 #tests.verify_login("admin_credentials","admin")
 #tests.add_student_record("admin_credentials","admin")
-#tests.get_all_records("student_records")
+#tests.get_all_records("student_details")
 

@@ -90,5 +90,5 @@ class ReusableMethods:
         return email
 
 
-tst = ReusableMethods()
-tst.accept_validate_email()
+
+

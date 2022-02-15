@@ -152,7 +152,28 @@ class ConnectToDB:
         except:
             ConnectToDB.myconnection.rollback()
 
+    def fetch_column_names(self,param):
+        """
+         To fetch the column names of the table
+        :return:
+        """
+        query = "select COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=\'"+param+"\'"
+        get_col_count_query = "select count(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=\'"+param+"\'"
+        column_list = ["dummy"]
+        try:
+            dbs1 = ConnectToDB.cursors.execute(query)
+            for x in ConnectToDB.cursors:
+                column_list.append(x[0])
+            return column_list
+        except Exception as e:
+            ConnectToDB.myconnection.rollback()
+            print(e)
+
+
 #test = ConnectToDB()
 #test.insert_into_StudentRecords("student_records","John","12","A", 2090)
 #test.insert_into_StudentDetails("student_details","Lara","Brawn","lara.brawn@gmail.com","lara12","pass")
 
+
+# list1 = test.fetch_column_names("student_details")
+# print(list1)
