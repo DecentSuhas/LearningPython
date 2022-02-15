@@ -3,7 +3,7 @@ import openpyxl
 from PracticeScripts.StudentManagement.DB_Operations import ConnectToDB
 
 
-def write_into_file():
+def write_columnName_into_file():
     db = ConnectToDB()
     list1 = db.fetch_column_names("student_details")
     num = random.randrange(1, 100)
@@ -17,4 +17,4 @@ def write_into_file():
     wb.save(file)
 
 
-write_into_file()
+write_columnName_into_file()
