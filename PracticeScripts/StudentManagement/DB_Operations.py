@@ -170,6 +170,7 @@ class ConnectToDB:
             print(e)
 
 
+
 #test = ConnectToDB()
 #test.insert_into_StudentRecords("student_records","John","12","A", 2090)
 #test.insert_into_StudentDetails("student_details","Lara","Brawn","lara.brawn@gmail.com","lara12","pass")
