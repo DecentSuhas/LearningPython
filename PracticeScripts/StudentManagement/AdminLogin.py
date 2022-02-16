@@ -15,7 +15,7 @@ class AdminLogin(ConnectToDB):
         fetch_password = db.display_record(query)
         count = 0
         for i in range(3):
-            pwd = int(input("Enter the password: "))
+            pwd = input("Enter the password: ")
             if pwd == fetch_password:
                 print("Login is successful")
                 return True

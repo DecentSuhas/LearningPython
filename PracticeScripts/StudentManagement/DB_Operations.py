@@ -173,7 +173,6 @@ class ConnectToDB:
 #test = ConnectToDB()
 #test.insert_into_StudentRecords("student_records","John","12","A", 2090)
 #test.insert_into_StudentDetails("student_details","Lara","Brawn","lara.brawn@gmail.com","lara12","pass")
+#test.display_all_records("admin_credentials")
 
 
-# list1 = test.fetch_column_names("student_details")
-# print(list1)

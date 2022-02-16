@@ -3,7 +3,7 @@ import numpy as np
 
 info = np.array(['apple', 'berry', 'cherry', 'grapes', 'kiwi'])
 panda_series = pd.Series(info)
-#print(panda_series)
+print(panda_series)
 
 mydataset = {
   'cars': ["BMW", "Volvo", "Ford"],
