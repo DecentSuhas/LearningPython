@@ -110,6 +110,48 @@ class ConnectToDB:
             print(e)
             ConnectToDB.myconnection.rollback()
 
+
+    def insert_into_teachersDetails(self, tablename, f_name, l_name, qualification, totalExp, stream, contactNum, address, emp_id):
+        """
+        To insert the details of the teachers based on the parameter given
+        :param tablename:
+        :param f_name:
+        :param l_name:
+        :param qualification:
+        :param totalExp:
+        :param stream:
+        :param contactNum:
+        :param address:
+        :return:
+        """
+        sql = "insert into " + tablename + "(fname, lname, qualification, totalExperience, stream, contactNumber, address, empID) values (%s, %s, %s, %s, %s, %s, %s, %s)"
+        val = (f_name, l_name, qualification, totalExp, stream, contactNum, address, emp_id)
+        try:
+            dbs1 = ConnectToDB.cursors.execute(sql, val)
+            ConnectToDB.myconnection.commit()
+        except Exception as e:
+            print(e)
+            ConnectToDB.myconnection.rollback()
+
+    def insert_into_teachersRecords(self, tablename, f_name, l_name, level, classroom):
+        """
+            To insert the record of the teacher based on the parameter given
+        :param tablename:
+        :param f_name:
+        :param l_name:
+        :param level:
+        :param classroom:
+        :return:
+        """
+        sql = "insert into " + tablename + "(fname, lname, grade, class) values (%s, %s, %s, %s)"
+        val = (f_name, l_name, level, classroom)
+        try:
+            dbs1 = ConnectToDB.cursors.execute(sql, val)
+            ConnectToDB.myconnection.commit()
+        except Exception as e:
+            print(e)
+            ConnectToDB.myconnection.rollback()
+
     def display_all_records(self, tablename):
         """
          To display all the rows present in a given table
@@ -175,5 +217,6 @@ class ConnectToDB:
 #test.insert_into_StudentRecords("student_records","John","12","A", 2090)
 #test.insert_into_StudentDetails("student_details","Lara","Brawn","lara.brawn@gmail.com","lara12","pass")
 #test.display_all_records("admin_credentials")
-
+#test.insert_into_teachersDetails("teachers_details","Vani","Jairam","Bcom,B.Ed","8","Accounts","8875845500", "#50, Sadashivnagar, Banaglore-74","102877")
+#test.insert_into_teachersRecords("teachers_records","Vani","Jairam","2","11")
 
