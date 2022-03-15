@@ -90,7 +90,7 @@ def count():
     str = "holauhhhja"
     count = 0
     flag = 0
-    while flag>=0:
+    while flag >= 0:
 
         for i in range(len(str)):
             if str[i] == "h":
@@ -101,4 +101,32 @@ def count():
         else:
             flag = -1
             print(count, "h are present")
-count()
+
+
+def strings_slicing():
+    s = "Bengaluru"
+    first_2_letters = s[:2]
+    fifth_letter = s[4]
+    multiply_5th_letter = s[4] * 3
+    from_4th_letter_to_rest = s[3:]
+    last_char = s[-1]
+    skip_2nd_letter = s[0:len(s):2]
+    revers_string = s[::-1]
+    concatenate_sliced_string = s[0:4] + s[4:]
+    third_char_starting_Last_till_first_backward = s[-1:0:-3]  # or s[::-3]
+    first_and_last_char_approach_1 = s[::-1][-1] + s[len(s) - 1]
+    first_and_last_char_approach_2 = s[::-1][::-5]
+    first_and_last_char_approach_3 = s[0] + s[-1]
+    first_and_last_char_approach_4 = s[0] + s[-1]
+    last_and_first_Char = s[::-5]
+
+    print(s[::-1][::-1] == s)  # True
+    print(s[:] == s)  # True
+    print(s[:] is s)  # True
+    print(s[::-1][::-1] is s)  # False
+
+    print(third_char_starting_Last_till_first_backward)
+
+
+#strings_slicing()
+s = "Bengaluru"
