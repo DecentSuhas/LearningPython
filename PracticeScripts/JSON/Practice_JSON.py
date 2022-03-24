@@ -12,9 +12,28 @@ referral_token = {
     ]
 }
 
+ebooks_details = '''{
+   "eBooks":[
+      {
+         "language":"Pascal",
+         "edition":"third"
+      },
+      {
+         "language":"Python",
+         "edition":"four"
+      },
+      {
+         "language":"SQL",
+         "edition":"second"
+      }
+   ]
+}
+'''
 def write_to_json():
     with open("sample.json", 'w') as write_file:
         json.dump(referral_token,write_file)
 
 
-write_to_json()
+data = json.loads(ebooks_details)
+for i in data['eBooks']:
+    print(i)
