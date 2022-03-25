@@ -1,3 +1,3 @@
 # LearningPython
 All about python.
-It has all basic concepts, practice programmes.
+It has all basic concepts, ractice Qs
