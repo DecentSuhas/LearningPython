@@ -130,3 +130,5 @@ def strings_slicing():
 
 #strings_slicing()
 s = "Bengaluru"
+if s in "B":
+    print(s)
