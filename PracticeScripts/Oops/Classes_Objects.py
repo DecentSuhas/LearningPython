@@ -120,4 +120,19 @@ class Vehicles:
 # print(test.__doc__)
 
 
+class Vehicle:
+    name = ""
+    color = ""
+    price = ""
+    type = ""
 
+    def car1(self, name, color, price, type):
+        print(f"Car1 details: , {name}, {color}, {price}, {type}")
+
+    def car2(self, name, color, price, type):
+        print(f"Car2 details: , {name}, {color}, {price}, {type}")
+
+
+test = Vehicle()
+test.car1("Fer","Red","60000","Convertible")
+test.car2("Jump","Blue","100000","Van")
