@@ -1,5 +1,6 @@
 # Concatenate all keys which have similar values
 import collections
+from datetime import datetime, date, timedelta
 
 
 def print_SimilarKeys():
@@ -85,7 +86,7 @@ def add_key_value():
 
     # Option 2:
     dict0 = {'Fifty': 50}
-    dict1.update(dict0)   # Also it is concatination
+    dict1.update(dict0)  # Also it is concatination
     print(dict1)
 
     # Option 3:
@@ -128,13 +129,13 @@ def sort_by_key():
 def getmaxAndMin():
     my_dict = {'x': 500, 'y': 5874, 'z': 560}
     print(max(my_dict.values()))  # >> 5874
-    print(max(my_dict.keys()))    # >> z
+    print(max(my_dict.keys()))  # >> z
     print(min(my_dict.values()))  # >> 500
     print(min(my_dict.keys()))  # >> x
 
 
 def isDictHasKey():
-    fruites = {'Apple':10, 'Mango':5, 'Grapes':5}
+    fruites = {'Apple': 10, 'Mango': 5, 'Grapes': 5}
     if 'Apple' in fruites:
         print("Apple is present")
     else:
@@ -146,3 +147,53 @@ def isDictHasKey():
         print("Guava is not present")
 
 
+today = date.today()
+
+
+def format_date(expected_date):
+    formated_date = expected_date.strftime("%a %d %b %Y")
+    return formated_date
+
+
+def next_assessment_date(no_of_days):
+    year = int(today.strftime("%Y"))
+    print(int(year))
+    month = int(today.strftime("%m"))
+    day = int(today.strftime("%d"))
+    next_date = datetime(year, month, day)
+    print(next_date)
+    next_date = next_date+timedelta(days=no_of_days)
+    return next_date
+
+
+def formatted_date(expected_date):
+    """
+    This method returns a formatted date. Used for skin analysis feature
+    :param self:
+    :param expected_date:
+    :return:
+    """
+    formated_date = expected_date.strftime("%a %d %b %Y").replace(' 0', ' ')
+    print(formated_date)
+    formated_date = formated_date.replace(' 0', ' ')
+    return formated_date
+
+
+def increment_date(no_of_days):
+    """
+      This method returns the date by incrementing it to 7 days to the current date.
+    :param self:
+    :param no_of_days:
+    :return:
+    """
+    year = int(today.strftime("%Y"))
+    month = int(today.strftime("%m"))
+    day = int(today.strftime("%d"))
+    next_date = datetime(year, month, day)
+    next_date = next_date + timedelta(days=int(no_of_days))
+    future_date = next_date.strftime("%a %d %b %Y").replace(' 0', ' ')
+    return future_date
+
+
+next = formatted_date(today)
+print(next)
