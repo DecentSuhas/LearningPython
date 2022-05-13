@@ -147,53 +147,22 @@ def isDictHasKey():
         print("Guava is not present")
 
 
-today = date.today()
-
-
-def format_date(expected_date):
-    formated_date = expected_date.strftime("%a %d %b %Y")
-    return formated_date
-
-
-def next_assessment_date(no_of_days):
-    year = int(today.strftime("%Y"))
-    print(int(year))
-    month = int(today.strftime("%m"))
-    day = int(today.strftime("%d"))
-    next_date = datetime(year, month, day)
-    print(next_date)
-    next_date = next_date+timedelta(days=no_of_days)
-    return next_date
-
-
-def formatted_date(expected_date):
+def sort():
     """
-    This method returns a formatted date. Used for skin analysis feature
-    :param self:
-    :param expected_date:
+    Write a Python script to sort (ascending and descending) a dictionary by value
     :return:
     """
-    formated_date = expected_date.strftime("%a %d %b %Y").replace(' 0', ' ')
-    print(formated_date)
-    formated_date = formated_date.replace(' 0', ' ')
-    return formated_date
+    age = {'Kamal':33, 'Vimal':43, 'Samal': 29, 'Raj': 37}
+    for value in sorted(age.values()):
+        print(value)
 
-
-def increment_date(no_of_days):
+def addKey():
     """
-      This method returns the date by incrementing it to 7 days to the current date.
-    :param self:
-    :param no_of_days:
+    Write a Python script to add a key to a dictionary
     :return:
     """
-    year = int(today.strftime("%Y"))
-    month = int(today.strftime("%m"))
-    day = int(today.strftime("%d"))
-    next_date = datetime(year, month, day)
-    next_date = next_date + timedelta(days=int(no_of_days))
-    future_date = next_date.strftime("%a %d %b %Y").replace(' 0', ' ')
-    return future_date
+    age = {1:10,2:20}
+    age[3] = 30
+    print(age)
 
-
-next = formatted_date(today)
-print(next)
+addKey()

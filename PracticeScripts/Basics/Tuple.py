@@ -1,3 +1,20 @@
+"""
+
+Some key points about tuple
+1. Tuples are ordered and the order will not change
+2. Tuples are unchangeble. Meaning you can not add, remove items
+3. Tuples allow duplicates
+4. Tuple itmes are indexed [0] ... [n]
+5. You can create tuple with 1 item but comma is imp. CORRECT: fruites = ("apple",)  INCORRECT: fruites = ("apple")
+6. Tuple accepts different datatypes.
+
+
+
+"""
+
+
+
+
 def find_index():
     tuple1 = ('1', '2', '3')
     print(tuple1)

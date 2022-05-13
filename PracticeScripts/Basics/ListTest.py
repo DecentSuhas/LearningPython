@@ -3,18 +3,18 @@ import random
 
 
 
-def printOdds():
+def printOdds():  #Complexity : O(1 + 3n) = O(n)
     """ Use a loop to display elements from a given list present at odd index positions """
-    list_a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-    for i in range(1, len(list_a)):
-        if i % 2 != 0:
-            print(list_a[i])
+    list_a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']  #O(1)
+    for i in range(1, len(list_a)): #O(n)
+        if i % 2 != 0: #O(n)
+            print(list_a[i]) #O(n)
 
 
-def remove_dups():
+def remove_dups(): #Complexity :
     """ Write the program to remove the duplicate element of the list. """
-    list_a = ['Raju', 'Rana', 'Shinu', 'Raju', 'Mona', 'Shyama', 'Shinu', 'Shyama']
-    for i in range(0, len(list_a)):
+    list_a = ['Raju', 'Rana', 'Shinu', 'Raju', 'Mona', 'Shyama', 'Shinu', 'Shyama']  #O(1)
+    for i in range(0, len(list_a)): #O(n)
         str1 = list_a[i]
         for k in range(0, i):
             s = list_a[k]
@@ -23,13 +23,13 @@ def remove_dups():
                 break
 
 
-def print_sum_of_list():
+def print_sum_of_list():  # Complextity: O(3 + 2n) == O(n)
     """ Write a program to find the sum of the element in the list. """
-    sum1 = 0
-    list_a = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    for i in list_a:
-        sum1 = sum1 + i
-    print(sum1)
+    sum1 = 0  #O(1)
+    list_a = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]  #O(1)
+    for i in list_a: #O(n)
+        sum1 = sum1 + i #O(n)
+    print(sum1) #O(1)
 
 
 def find_common_element():
@@ -49,8 +49,8 @@ def find_common_element():
 
 def list_in_range():
     """ Python – Test if List contains elements in Range - Guessed logic """
-    list1 = ['a', 'b', 'c', 'd']
-    for i in range(len(list1)):
+    list1 = ['a', 'b', 'c', 'd']  #O(1)
+    for i in range(len(list1)): #O(n)
         text = input("Enter the letter: ")
         if text == list1[i]:
             print("Element is found at the index ", i)
