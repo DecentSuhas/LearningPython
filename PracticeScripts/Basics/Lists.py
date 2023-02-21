@@ -134,6 +134,17 @@ def remove_duplicates():
         final_list.append(list2[j])
     print(final_list)
 
+def remove_dubplicates_sol2():
+    list1 = ['cat', 'dog', 'cow', 'Horse']
+    list2 = ['Parrot', 'Pigeon', 'Eagle', 'cow']
+    list3 = []
+    for i in list1:
+        if i not in list3:
+            list3.append(i)
+    for i in list2:
+        if i not in list3:
+            list3.append(i)
+    print(list3)
 
 def count_uniques():
     """ Python Program to count unique values inside a list """
@@ -192,4 +203,4 @@ def removeOccurrence(ele):
                 list1.remove(i)
     print(list1)
 
-removeOccurrence(4)
+remove_duplicates()

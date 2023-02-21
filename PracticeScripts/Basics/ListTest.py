@@ -13,14 +13,12 @@ def printOdds():  #Complexity : O(1 + 3n) = O(n)
 
 def remove_dups(): #Complexity :
     """ Write the program to remove the duplicate element of the list. """
-    list_a = ['Raju', 'Rana', 'Shinu', 'Raju', 'Mona', 'Shyama', 'Shinu', 'Shyama']  #O(1)
-    for i in range(0, len(list_a)): #O(n)
-        str1 = list_a[i]
-        for k in range(0, i):
-            s = list_a[k]
-            if list_a[k] == str1:
-                print("Duplicate found : ", list_a[k])
-                break
+    list_names = ['Raju', 'Rana', 'Shinu', 'Raju', 'Mona', 'Shyama', 'Shinu', 'Shyama']  #O(1)
+    new_list = []
+    for name in list_names:
+        if name not in new_list:
+            new_list.append(name)
+    print(new_list)
 
 
 def print_sum_of_list():  # Complextity: O(3 + 2n) == O(n)
@@ -94,7 +92,7 @@ def count_uniques():
 
 def product_excluding_dupes():
     """ Python – List product excluding duplicates """
-    list1 = [2, 3, 4, 5, 6, 6, 7, 9, 9]
+    list1 = [2, 3, 3, 4, 5]
     prod = 1
     unique_list = list(set(list1))
     print(unique_list)
@@ -141,4 +139,37 @@ def removeOccurrence(ele):
                 list1.remove(i)
     print(list1)
 
-removeOccurrence(4)
+
+def ascending_order():
+    list1 = [99, 2, 4, 200, 6, 987, 8, 90]
+    temp = 0
+
+    for i in range(0, len(list1)):
+        for j in range(i, len(list1)):
+            if (list1[j] < list1[i]):
+                temp = list1[j]
+                list1[j] = list1[i]
+                list1[i] = temp
+    print(list1)
+
+
+def descending_order():
+    list1 = [99, 2, 4, 200, 6, 987, 8, 90]
+    temp = 0
+
+    for i in range(0, len(list1)):
+        for j in range(i, len(list1)):
+            if (list1[i] < list1[j]):
+                temp = list1[j]
+                list1[j] = list1[i]
+                list1[i] = temp
+    print(list1)
+
+
+def largest():
+    list1 = [99, 2, 4, 200, 6, 987, 8, 90]
+    max = 0
+    for i in list1:
+        if(i>max):
+            max=i
+    print(max)
