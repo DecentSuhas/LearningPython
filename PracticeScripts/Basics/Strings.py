@@ -132,3 +132,127 @@ def strings_slicing():
 s = "Bengaluru"
 if s in "B":
     print(s)
+
+
+def smallest_largest():
+    # Print the smallest and largest word in the given string
+    text = "i love my country"
+    max_len = 0
+    new_text = text.split(" ")
+    smallest_word = new_text[0]
+    largest_word = ""
+    for ele in new_text:
+        if len(ele) < len(smallest_word):
+            smallest_word = ele
+        elif len(ele) > max_len:
+            largest_word = ele
+
+    print("Smallest word: ", smallest_word)
+    print("Largetst word: ", largest_word)
+
+
+def palindrome():
+    # Ask the user for a string and print out whether this string is a palindrome or not
+    text = input("Enter your word: ")
+    length = int(len(text))
+    is_pal = True
+    for i in range(0, int(len(text) / 2)):
+        if (text[i] != text[len(text) - i - 1]):
+            is_pal = False
+    if is_pal:
+        print("it is palindrome")
+    else:
+        print("It is not palindrome")
+
+
+def print_even():
+    # Write one line of Python that takes this list a and makes a new list that has only the even elements of this list in it.
+    a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    new_list = []
+    for num in a:
+        if num % 2 == 0:
+            new_list.append(num)
+    print(new_list)
+
+
+def reverse_string():
+    # Print the words in backwords
+    text = "My name is Michele"  #O/P =  "Michele is name My"
+    list1 = text.split(" ")
+    result = []
+    for item in range(len(list1) - 1, -1, -1):
+        word = list1[item]
+        result.append(word)
+    print(" ".join(result))
+
+
+def check_length():
+    # WAP to count the lenght of the string without inbuilt function
+    text = "madam"
+    num = 0
+    count = 0
+    try:
+        while text[num] != '!':
+            count = count + 1
+            num = num + 1
+    except:
+        print(count)
+
+
+def replace_Charecter():
+    '''
+    Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char
+    Sample String : 'restart'
+    Expected Result : 'resta$t'
+    '''
+
+    # METHOD 1:
+    text = input("Enter your word: ")
+    which_char = input("Enter the character you wanna replace: ")
+    count = 0
+    list1 = list(text)
+    for i in range(len(list1)):
+        if (list1[i]) == which_char:
+            count = count + 1
+            if count > 1:
+                list1[i] = "$"
+    print(" ".join(list1))
+
+    # METHOD 2:
+    str1 = "restarted"
+    i = 0
+    char = " "
+    if "e" in str1:
+        i = str1.index("e")
+        char = str1[i]
+    str1 = str1.replace(char, '$')
+    str1 = char + str1[1:]
+    print(str1)
+
+
+def find_replace():
+    '''
+    Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
+     If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+     Sample String : 'The lyrics is not that poor!' OR 'The lyrics is poor!'
+    Expected Result : 'The lyrics is good!' OR    'The lyrics is poor!'
+     '''
+
+    text = "Lyric is very poor"
+    s_not = text.find("not")
+    s_poor = text.find("poor")
+    print(s_not)
+    print(s_poor)
+    if s_poor > s_not > 0 and s_poor > 0:
+        text = text.replace(text[s_not:], "good")
+    elif s_poor > 0:
+        text = text.replace(text[s_poor:], "good")
+    print(text)
+
+
+def replace_first_last_word():
+# Write a Python program to change a given string to a newly string where the first and last chars have been exchanged
+    text = "abcdef"
+    f = text[0]
+    l = text[-1]
+    print(text[-1] + text[1:-1] + text[0])
