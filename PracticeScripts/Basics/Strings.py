@@ -256,3 +256,86 @@ def replace_first_last_word():
     f = text[0]
     l = text[-1]
     print(text[-1] + text[1:-1] + text[0])
+
+
+def createFromMiddle():
+    # Create a string made of the middle three characters
+    # CASE : str1 = "JhonDipPeta"
+    # SOLUTION: Dip
+    str1 = "JhonDipPeta"
+    listOfstr = list(str1)
+    newList = []
+    midValue = int(len(listOfstr) / 2)
+    for i in range(midValue - 1, midValue + 2):
+        newList.append(listOfstr[i])
+
+    print("".join(newList))
+
+
+def string_from_f_m_l():
+    # Create a new string made of the first, middle, and last characters of each input string
+    s1 = "America"
+    s2 = "Japan"
+    output = "AJrpan"
+
+    f_char = s1[0] + s2[0]
+    mid_char = f_char + s1[int(len(s1) / 2)]
+    last_char = mid_char + s2[int(len(s2) / 2):]
+    print(last_char)
+
+
+def lowerToUpper():
+    # Arrange string characters such that lowercase letters should come first
+    str1 = "PyNaTive"  # Output: yaivePNT
+    l1 = list(str1)
+    temp = ""
+    for i in range(0, int(len(l1)) - 1):
+        for j in range(i, int(len(l1))):
+            if l1[i].isupper():
+                temp = l1[i]
+                l1[i] = l1[j]
+                l1[j] = temp
+    print("".join(l1))
+
+def count_chars():
+    # Count all letters, digits, and special symbols from a given string
+    str1 = "P@#yn26at^&i5ve"
+    letter_count = 0
+    spl_count = 0
+    int_count = 0
+    for i in str1:
+        if i.isalpha():
+            letter_count += 1
+        elif i.isnumeric():
+            int_count += 1
+        else:
+            spl_count += 1
+    print("No of letters: ", letter_count)
+    print("No of special characters: ", spl_count)
+    print("No of integers: ", int_count)
+
+
+def find_occur():
+    # Find all occurrences of a substring in a given string by ignoring the case
+    str1 = "Welcome to USA usa awesome, isn't it?"
+    l1 = str1.split(" ")
+    stringToFind = "USA"
+    foundinindex = 0
+    for i in range(0, len(l1)):
+        if l1[i] == stringToFind:
+            foundinindex = i
+
+    print(stringToFind + " is found at the index", foundinindex)
+
+
+def get_avg_num():
+    # Calculate the sum and average of the digits present in a string
+    str1 = "PYnative29@#8496"
+    sum_of_num = 0
+    total_digits = 0
+    for i in str1:
+        if i.isnumeric():
+            total_digits += 1
+            sum_of_num = sum_of_num + int(i)
+    avg = sum_of_num / total_digits
+    print(avg)
