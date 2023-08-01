@@ -149,6 +149,4 @@ def myNames(tablename,*columns):
         temp = "create table " + str(tablename) + "("+str(i)+" varchar(20) not null, "+str(i)+" int not null primary key, "+str(i)+" int not null)"
     print(temp)
 
-
-
-myNames("EmpDetails",'Emp_name','Age','salary','emp_id','Dept')
+# myNames("EmpDetails",'Emp_name','Age','salary','emp_id','Dept')

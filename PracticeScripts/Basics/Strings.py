@@ -339,3 +339,57 @@ def get_avg_num():
             sum_of_num = sum_of_num + int(i)
     avg = sum_of_num / total_digits
     print(avg)
+
+
+def remove_spl():
+    # Remove special symbols / punctuation from a string
+    # Given str1 = "/*Jon is @developer & musician"
+    # Expected = "Jon is developer musician"
+    str1 = "/*Jon is @developer & musician"
+    l1 = []
+    for i in str1:
+        if i.isalpha():
+            l1.append(i)
+        elif i.isspace():
+            l1.append(i)
+    print("".join(l1))
+
+
+def remove_alpha():
+    # Removal all characters from a string except integers
+    # Given :'I am 25 years and 10 months old'
+    # Output: 2510
+    str1 = 'I am 25 years and 10 months old'
+    l1 = []
+    for i in str1:
+        if i.isnumeric():
+            l1.append(i)
+    print("".join(l1))
+
+
+def bothalphNum():
+    # Find words with both alphabets and numbers
+    # Given : "Emma25 is Data scientist50 and AI Expert"
+    # output: Emma25
+    # scientist50
+    str1 = "Emma25 is Data scientist50 and AI Expert"
+    str2 = str1.split(" ")
+    for i in str2:
+        if not i.isalpha():
+            print(i)
+
+def replaceSpl():
+    # Replace each special symbol with # in the following string
+    # Given: '/*Jon is @developer & musician!!'
+    # ##Jon is #developer # musician##
+    str1 = '/*Jon is @developer & musician!!'
+    l1 = []
+    for i in str1:
+        if not i.isalpha() and not i.isspace():
+            replace = "#"
+            l1.append(replace)
+        elif i.isspace():
+            l1.append(i)
+        else:
+            l1.append(i)
+    print("".join(l1))

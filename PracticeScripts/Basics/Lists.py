@@ -203,4 +203,10 @@ def removeOccurrence(ele):
                 list1.remove(i)
     print(list1)
 
-remove_duplicates()
+def missing_num():
+    arr = [1, 2, 3, 4, 8, 6, 7, 9, 10]
+    missing_elements = []
+    for ele in range(arr[0], arr[-1]):
+        if ele not in arr:
+            missing_elements.append(ele)
+    print(missing_elements)

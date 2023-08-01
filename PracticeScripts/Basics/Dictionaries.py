@@ -164,5 +164,15 @@ def addKey():
     age = {1:10,2:20}
     age[3] = 30
     print(age)
+    names = {"std1": "Anu", "std2": "Romila", "std3": "Anitha"}
+    names.update({"std4": "Ganga"})
+    print(names)
 
-addKey()
+def combine_dicts():
+    dic1 = {1: 10, 2: 20}
+    dic2 = {3: 30, 4: 40}
+    dic3 = {5: 50, 6: 60}
+    updated_dict = {}
+    for item in (dic1, dic2, dic3):
+        updated_dict.update(item)
+    print(updated_dict)

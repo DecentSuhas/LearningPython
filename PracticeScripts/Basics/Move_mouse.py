@@ -17,10 +17,10 @@ def move_mouse():
     print("Starting the movement now!")
     is_it_time = True
     while is_it_time:
-        pyautogui.moveTo(100, 100, duration=1)
+        pyautogui.moveTo(1300, 1050, duration=1)
         time.sleep(2)
         mouse.click('left')
-        pyautogui.moveTo(100, 10, duration=1)
+        pyautogui.moveTo(1350, 1050, duration=1)
         get_current_time = current_time()
         print("Current Time is :", get_current_time, ", Stops at: ", time_to_stop)
         mouse.click('left')

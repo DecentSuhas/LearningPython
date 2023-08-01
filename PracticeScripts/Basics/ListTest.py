@@ -66,6 +66,23 @@ def biggest_num():
                 max1 = list1[k]
     print(max1)
 
+    # class Practice {
+    #     public void printLargeNum(){
+    #         int[] values = {12, 4, 88, 19, 43, 771, 8};
+    #         int size = values.length;
+    #         int bigNum = 0;
+    #         for (int i=0; i < size; i++){
+    #             for (int j=1; j < size-1;j++){
+    #                 if (values[j] > values[i]){
+    #                     bigNum = values[j];
+    #                 }
+    #             }
+    #         }
+    #         System.out.println(bigNum);
+    #     }
+    #
+    # }
+
 
 def remove_duplicates():
     """ Find the duplicate from 2 lists and if found remove it. """
@@ -183,3 +200,101 @@ def print_less_than_5():
         if num < 5:
             new_list.append(num)
     print(new_list)
+
+
+def reverse_list():
+    list1 = [100, 200, 300, 400, 500]
+    new_list = []
+    for item in range(len(list1) - 1, -1, -1):
+        new_list.append(list1[item])
+    print(new_list)
+
+
+
+def index_wise_concatinate_1():
+    # Concatenate two lists index-wise
+    # Output : ['My', 'name', 'is', 'Kelly']
+    list1 = ["M", "na", "i", "Ke"]
+    list2 = ["y", "me", "s", "lly"]
+    list3 = [i + j for i, j in zip(list1, list2)]
+    print(list3)
+
+
+def index_wise_concatinate_2():
+    # Concatenate two lists index-wise
+    # Output : [('M', 'y'), ('na', 'me'), ('i', 's'), ('Ke', 'lly')]
+    list1 = ["M", "na", "i", "Ke"]
+    list2 = ["y", "me", "s", "lly"]
+    list3 = zip(list1, list2)
+    print(list(list3))
+
+
+def list_to_dict():
+    # Convert two lists into a dictionary
+    # Output: {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+    keys = ['Ten', 'Twenty', 'Thirty']
+    values = [10, 20, 30]
+    dict1 = zip(keys, values)
+    print(dict(dict1))
+
+
+def common_consecutive():
+    # Python program to check if the list contains three consecutive common numbers in Python
+    # Input : a = [8,8,8, 5,7,9,9,9]
+    # Output: [8,9]
+    list_a = [8, 8, 8, 5, 7, 9, 9, 9]
+    new_list = []
+    for i in range(0, len(list_a) - 2):
+        if (list_a[i] == list_a[i + 1] and list_a[i + 1] == list_a[i + 2]):
+            new_list.append(list_a[i])
+    print(new_list)
+
+
+def possible_combinations():
+    # Python Program to print all Possible Combinations from the three Digits
+    # input: [1, 2, 3]
+    list_1 = [1, 2, 3]
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                if i!=j and j!=k and k!=i:
+                    print(list_1[i], list_1[j], list_1[k])
+    # public static void main(String[] args) {
+    #     int [] num = {1, 2, 3};
+    # 	for(int i = 0; i<= 2; i++){
+    # 	    for (int j = 0; j<=2; j++){
+    # 	        for (int k = 0; k<=2; k++){
+    # 	            if((i!=j)&&(j!=k)&&(k!=i)){
+    # 	                System.out.println(num[i]+" "+num[j]+" "+num[k]);
+    # 	            }
+    # 	        }
+    # 	    }
+    # 	}
+    # }
+
+
+def unique_combination():
+    # Python program to get all unique combinations of two Lists
+    # list_1 = ['a', 'b', 'c']
+    # list_2 = [1, 2, 3]
+    # Output = [('a', 1), ('a', 2), ('a', 3), ('b', 1), ('b', 2), ('b', 3), ('c', 1), ('c', 2), ('c', 3)]
+    list_1 = ['a', 'b', 'c']
+    list_2 = [1, 2, 3]
+    new_list = []
+    for i in range(len(list_1)):
+        for j in range(len(list_2)):
+            new_list.append((list_1[i], list_2[j]))
+    print(new_list)
+
+
+def remove_duplicate_tuple():
+    # Python – Remove Consecutive K element records
+    # Input: test_list = [(4, 5, 6, 3), (5, 6, 6, 9),(5, 6, 6, 9), (1, 3, 5, 6), (6, 6, 7, 8)]
+    # Output: [(4, 5, 6, 3), (5, 6, 6, 9), (1, 3, 5, 6), (6, 6, 7, 8)]
+    test_list = [(4, 5, 6, 3), (5, 6, 6, 9), (5, 6, 6, 9), (1, 3, 5, 6), (6, 6, 7, 8)]
+    updated_list = []
+    size = len(test_list)
+    for i in range(0, size):
+        if test_list[i] != test_list[i - 1]:
+            updated_list.append(test_list[i])
+    print(updated_list)
