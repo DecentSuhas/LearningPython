@@ -86,6 +86,8 @@ def biggest_num():
 
 def remove_duplicates():
     """ Find the duplicate from 2 lists and if found remove it. """
+
+    # Method 1:
     list1 = ['cat', 'dog', 'cow', 'Horse']
     list2 = ['Parrot', 'Pigeon', 'Eagle', 'cow']
     final_list = []
@@ -98,6 +100,15 @@ def remove_duplicates():
         final_list.append(list2[j])
     print(final_list)
 
+    # Method 2:
+    list1 = ['cat', 'dog', 'cow', 'Horse']
+    list2 = ['Parrot', 'Pigeon', 'Eagle', 'cow', 'cat', 'Horse']
+    newList = []
+    newList = newList + list1
+    for item in list2:
+        if item not in newList:
+            newList.append(item)
+    print(newList)
 
 def count_uniques():
     """ Python Program to count unique values inside a list """

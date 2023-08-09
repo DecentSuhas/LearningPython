@@ -136,4 +136,4 @@ def sort_alphabetically():
     print(tuple1)
 
 
-sort_alphabetically()
+tuple_compare()
