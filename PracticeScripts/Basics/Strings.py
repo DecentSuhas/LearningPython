@@ -393,3 +393,24 @@ def replaceSpl():
         else:
             l1.append(i)
     print("".join(l1))
+
+
+def string_compress():
+    input = 'aabcccccaaa'
+    # output = 'a2b1c5a3'
+    current_count = 1
+    current_char = input[0]
+    new_text = []
+    for i in range(1, len(input)):
+        if input[i] == current_char:
+            current_count = current_count + 1
+        else:
+            new_text.append(current_char)
+            new_text.append(str(current_count))
+            current_char = input[i]
+            current_count = 1
+
+    new_text.append(current_char)
+    new_text.append(str(current_count))
+    updated_text = ''.join(new_text)
+    print(updated_text)
