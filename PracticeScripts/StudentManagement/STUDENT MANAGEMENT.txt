@@ -1,0 +1,24 @@
+
+
+################ STUDENT MANAGEMENT APP ################
+
+STUDENT:
+	1. Student can sign up
+	2. Student can login and get his details
+	
+ADMIN:
+	1. Can add/enroll students to different classes
+	2. Can retrieve students record
+	3. Can retrieve students personal details
+	4. Can download students record in xl file
+	5. Can project the no of students in graph format
+	6. Can import/upload students record data
+	
+	
+	Teachers details
+	Assign teachers to class rooms
+	Course details
+	Total students each teacher has
+
+	
+
